@@ -4,12 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    name = "World"
-    return render_template("index.html", name=name)
-
-@app.route("/hello/<name>")
-def hello(name):
-    return f"Hello, {name}!"
+    return render_template("index.html") #This assumes index.html is in your templates folder
 
 if __name__ == "__main__":
     app.run(debug=True)
