@@ -3,27 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        header { background-color: #f0f0f0; padding: 20px; }
-        main { padding: 20px; }
-        footer { background-color: #f0f0f0; padding: 20px; text-align: center; }
-    </style>
+    <title>Taufiq Hashmi - Portfolio</title>
+    {% load static %}  <!-- Django template tag to load static files -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">  <!-- Link to your Tailwind stylesheet -->
 </head>
-<body>
-    <header>
-        <h1>My Website</h1>
-        <nav>
-            <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
-        </nav>
+<body class="bg-gray-100">
+
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Taufiq Hashmi</h1>
+            <p class="text-lg">Django Developer | AI Enthusiast | Hardware Hacker</p>
+        </div>
     </header>
 
-    <main>
-        <p>This is the main content area.</p>
+    <main class="container mx-auto p-8">
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">About Me</h2>
+            <p class="text-lg">
+                I'm Taufiq Hashmi, a passionate Django developer with a keen interest in AI and hardware projects.  [Add a more detailed description of yourself here].
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Django Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Example Project -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Project Title 1</h3>
+                    <p>Short description of project 1.  [Add links to GitHub, live demo, etc.]</p>
+                </div>
+                <!-- Add more project divs here -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Project Title 2</h3>
+                    <p>Short description of project 2.  [Add links to GitHub, live demo, etc.]</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">AI Projects</h2>
+            <p> [List your AI projects here, similar structure to Django Projects above]</p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Hardware Projects</h2>
+            <p> [List your hardware projects here, similar structure to Django Projects above]</p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Contact</h2>
+            <p> [Add your contact information here: email, LinkedIn, GitHub, etc.]</p>
+        </section>
     </main>
 
-    <footer>
-        &copy; 2023 My Website
+    <footer class="bg-gray-800 text-white text-center p-4">
+        &copy; 2023 Taufiq Hashmi
     </footer>
+
 </body>
 </html>
